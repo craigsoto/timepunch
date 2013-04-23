@@ -2,7 +2,7 @@ require 'digest/sha2'
 
 class User < ActiveRecord::Base
 	#attr_accessible :name, :hashed_password, :salt
-	validates :name, :presence => true, :uniquness => true
+	validates :name, :presence => true, :uniqueness => true
 	
 	validates :password, :confirmation => true
 	attr_accessible :password_confirmation
